@@ -1,0 +1,47 @@
+{% block page_content %}
+<html>
+<head>
+<title>
+	Questionnaire
+</title>
+</head>
+<body>
+	<h4>Please fill the blanks below</h4>
+	<div>
+		<p>If there's any problem please contact: shi.sh@foxmail.com&nbsp;&nbsp;
+		</p>
+	</div>
+
+</body>
+<form action="{{ url_for('user') }}" method="post">
+	<label for="stu_id">Student ID</label>
+	<input id="stu_id" type="text" name="stu_id" placeholder="17023655" required />
+	<br>
+	<label for="name">Name</label>
+	<input id="name" type="text" name="name" placeholder="Aamir Hussain Khan" required />
+	<br>
+	<label for="passport">Password Number</label>
+	<input id="passport" type="text" name="passport" placeholder="EB352148" required />
+	<br>
+	<label for="nationality">Nationality</label>
+	<input id="nationality" type="text" name="nationality" placeholder="Indian" required />
+	<br>
+	<label for="grade">Grade</label>
+	<input id="grade" type="text" name="grade" placeholder="2017" required />
+	<br>
+	<label for="major">Major</label>
+	<input id="major" type="text" name="major" placeholder="psycology" required />
+	<br>
+	<label for="remarks">Remarks</label>
+	<input id="remarks" type="text" name="remarks" placeholder="***" required />
+	<br>
+  <button type="submit">Submit</button>
+</form>
+<h4>List of data</h4>
+  {% for u in data %}
+    <p>{{ u.id }} | {{ u.name }} | {{ u.passport }} | {{ u.nationality }} | {{ u.grade }} | {{ u.major }} | {{ u.remarks }}</p>
+  {% else %}
+    <p>No users found in the db. You can make some above.</p>
+  {% endfor %}
+<html>
+{% endblock %}
