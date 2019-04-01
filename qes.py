@@ -5,7 +5,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
 
-DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://postgres:2643383@localhost/proxyget')
+DATABASE_URL = os.environ.get('DATABASE_URL', 'postgres://saayjgqzumrtix:5997bdca5394f21351a8f622d4833ec9f01751d3f1c39674dcb38029e4807a39@ec2-184-73-153-64.compute-1.amazonaws.com:5432/dblhph3s6fmvtu')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL
 db = SQLAlchemy(app)
