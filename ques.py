@@ -31,7 +31,7 @@ class User(db.Model):
 
 @app.route("/", methods=['GET'])
 def mainpage():
-	return render_template('q.html', data=User.query.all())
+	return render_template('ques.html', data=User.query.all())
 
 @app.route('/data', methods=['POST'])
 def user():
