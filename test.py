@@ -11,6 +11,7 @@ app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:2643383@localhost
 db = SQLAlchemy(app)
 
 class User(db.Model):
+	__tablename__ = "answers"
 	id = db.Column(db.Integer, primary_key=True)
 	stu_id = db.Column(db.String(100))
 	name = db.Column(db.String(100))
