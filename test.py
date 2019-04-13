@@ -8,6 +8,7 @@ app = Flask(__name__)
 #DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://postgres:2643383@localhost/proxyget')
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://sabcdxxljcjdtn:864ba46dec25227bf55fe8ee1d72530adac212a6f1f13da1e0603f94bc2ea118@ec2-184-73-153-64.compute-1.amazonaws.com:5432/d3sfutm4pft2ed'#DATABASE_URL
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 class User(db.Model):
