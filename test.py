@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 #DATABASE_URL = os.environ.get('DATABASE_URL', 'postgresql://postgres:2643383@localhost/proxyget')
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres+postgresconnector://thlkbfeqiflqns:f85fcf7676a4d5ca09d4694bca2b3a217bedaf804560a1887f75cd371c5781fb@ec2-54-197-239-115.compute-1.amazonaws.com:5432/d55ffb8qdfs2mq'#DATABASE_URL
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgres://thlkbfeqiflqns:f85fcf7676a4d5ca09d4694bca2b3a217bedaf804560a1887f75cd371c5781fb@ec2-54-197-239-115.compute-1.amazonaws.com:5432/d55ffb8qdfs2mq'#DATABASE_URL
 #app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:2643383@localhost/dlu'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
