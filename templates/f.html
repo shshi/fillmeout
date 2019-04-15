@@ -1,0 +1,451 @@
+{% block page_content %}
+<html>
+<head>
+<title>
+	Fill Me Out
+</title>
+</head>
+<body>
+	<h3 align="center">大理大学留学生教育&服务中心信息录入系统</h3>
+</body>
+<form action="{{ url_for('user') }}" method="post">
+<table align="center">
+	<tr>
+	<td><label for="idx">ID</label></td>
+	<td><input id="idx" type="text" name="idx" /></td>
+	</tr>
+	<tr>
+	<td><label for="stu_id">学生ID</label></td>
+	<td><input id="stu_id" type="text" name="stu_id" placeholder="LX54645201" /></td>
+	</tr>
+	<tr>
+	<td><label for="app_no">申请编号</label></td>
+	<td><input id="app_no" type="text" name="app_no" placeholder="201805056482" /></td>
+	</tr>
+	<tr>
+	<td><label for="stu_no">学号</label></td>
+	<td><input id="stu_no" type="text" name="stu_no" placeholder="201804097964" /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="surname">护照姓</label></font></td>
+	<td><input id="surname" type="text" name="surname" placeholder="Ma" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="givenname">护照名</label></font></td>
+	<td><input id="givenname" type="text" name="givenname" placeholder="Jack" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="fullname">护照姓名</label></font></td>
+	<td><input id="fullname" type="text" name="fullname" placeholder="Jack Ma" required /></td>
+	</tr>
+	<tr>
+	<td><label for="chinesename">学生中文名</label></td>
+	<td><input id="chinesename" type="text" name="chinesename" placeholder="马云" /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="passport">护照号码</label></font></td>
+	<td><input id="passport" type="text" name="passport" placeholder="EB352148" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="birthday">出生日期</label></font></td>
+	<td><input id="birthday" type="text" name="birthday" placeholder="19940208" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="nationality">国籍</label></font></td>
+	<td><input id="nationality" type="text" name="nationality" placeholder="泰国" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="sex">性别</label></font></td>
+	<td><input id="sex" type="text" name="sex" placeholder="男" required /></td>
+	</tr>	
+	<tr>
+	<td><label for="card_id">校园卡号</label></td>
+	<td><input id="card_id" type="text" name="card_id" placeholder="20180405658" /></td>
+	</tr>
+	<tr>
+	<td><label for="degree_app">申请学位</label></td>
+	<td><input id="degree_app" type="text" name="degree_app" placeholder="本科" /></td>
+	</tr>
+	<tr>
+	<td><label for="birthplace">出生地点</label></td>
+	<td><input id="birthplace" type="text" name="birthplace" placeholder="悉尼" /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="faculty">所在院系</label></font></td>
+	<td><input id="faculty" type="text" name="faculty" placeholder="基础医学院" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="major">来华学习专业</label></font></td>
+	<td><input id="major" type="text" name="major" placeholder="MBBS" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="length">学制</label></font></td>
+	<td><input id="length" type="text" name="length" placeholder="4年" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="reg_fee">报名费</label></font></td>
+	<td><input id="reg_fee" type="text" name="reg_fee" placeholder="600" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="tuition">学费</label></font></td>
+	<td><input id="tuition" type="text" name="tuition" placeholder="16000" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="stu_type">学生类别</label></font></td>
+	<td><input id="stu_type" type="text" name="stu_type" placeholder="本科生" required /></td>
+
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="marry">婚姻状况</label></font></td>
+	<td><input id="marry" type="text" name="marry" placeholder="单身" required /></td>
+	</tr>	
+	<tr>
+	<td><font color="#0000FF"><label for="reg_year">入学年份</label></font></td>
+	<td><input id="reg_year" type="text" name="reg_year" placeholder="2018" required /></td>
+	</tr>
+
+	<tr>
+	<td><font color="#0000FF"><label for="reg_season">入学季节</label></font></td>
+	<td><input id="reg_season" type="text" name="reg_season" placeholder="春季" required /></td>
+	</tr>
+	<tr>
+	<td><font color="#0000FF"><label for="stu_status">学生状态</label></font></td>
+	<td><input id="stu_status" type="text" name="stu_status" placeholder="在校" required /></td>
+	</tr>
+
+	<tr>
+	<td><label for="reason_leave">离校原因</label></td>
+	<td><input id="reason_leave" type="text" name="reason_leave" placeholder="毕业" /></td>
+	</tr>
+
+	<tr>
+	<td><font color="#0000FF"><label for="time_start">专业学习开始日期</label></font></td>
+	<td><input id="time_start" type="text" name="time_start" placeholder="20180301" required /></td>
+	</tr>
+
+	<tr>
+	<td><font color="#0000FF"><label for="time_finish">专业学习结束日期</label></font></td>
+	<td><input id="time_finish" type="text" name="time_finish" placeholder="20220630" required /></td>
+	</tr>
+
+	<tr>
+	<td><font color="#0000FF"><label for="study_lan">授课语言</label></font></td>
+	<td><input id="study_lan" type="text" name="study_lan" placeholder="英文" required /></td>
+	</tr>
+
+	<tr>
+	<td><font color="#0000FF"><label for="feefrom">经费来源</label></font></td>
+	<td><input id="feefrom" type="text" name="feefrom" placeholder="孔子学院奖学金" required /></td>
+	</tr>
+
+	<tr>
+	<td><label for="religion">宗教</label></td>
+	<td><input id="religion" type="text" name="religion" placeholder="伊斯兰教" /></td>
+	</tr>
+
+	<tr>
+	<td><label for="address">家庭地址</label></td>
+	<td><input id="address" type="text" name="address" placeholder="169 Bange Rd., Saik District, Seit Province, Thailand" /></td>
+	</tr>
+
+	<tr>
+	<td><label for="tel">家庭电话</label></td>
+	<td><input id="tel" type="text" name="tel" placeholder="0934665854" /></td>
+	</tr>
+
+	<tr>
+	<td><label for="email">邮箱</label></td>
+	<td><input id="email" type="text" name="email" placeholder="shekai@hotmail.com" /></td>
+	</tr>
+
+	<tr>
+	<td><label for="major_dir">专业方向</label></td>
+	<td><input id="major_dir" type="text" name="major_dir" placeholder="肿瘤药理学" /></td>
+	</tr>
+
+	<tr>
+	<td><label for="study_topic">研究课题</label></td>
+	<td><input id="study_topic" type="text" name="study_topic" placeholder="" /></td>
+	</tr>
+
+	<tr>
+	<td><label for="mentor">导师</label></td>
+	<td><input id="mentor" type="text" name="mentor" placeholder="王世清" /></td>
+	</tr>
+
+	<tr>
+	<td><label for="stay">停留期限</label></td>
+	<td><input id="stay" type="text" name="stay" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="scholarship">奖学金名称</label></td>
+	<td><input id="scholarship" type="text" name="scholarship" placeholder="孔子学院奖学金" /></td>
+	</tr>
+
+
+	<tr>
+	<td><label for="short_team">短期团组</label></td>
+	<td><input id="short_team" type="text" name="short_team" placeholder="" /></td>
+	</tr>
+
+	<tr>
+	<td><label for="fee_method">经费办法</label></td>
+	<td><input id="fee_method" type="text" name="fee_method" placeholder="" /></td>
+	</tr>
+
+	<tr>
+	<td><label for="grade">年级</label></td>
+	<td><input id="grade" type="text" name="grade" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="study_limit">学习期限年月</label></td>
+	<td><input id="study_limit" type="text" name="study_limit" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="app_date">申请时间</label></td>
+	<td><input id="app_date" type="text" name="app_date" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="admit_date">录取时间</label></td>
+	<td><input id="admit_date" type="text" name="admit_date" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="reg_date">报到时间</label></td>
+	<td><input id="reg_date" type="text" name="reg_date" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="grad_date">结毕业时间</label></td>
+	<td><input id="grad_date" type="text" name="grad_date" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="leav_date">离校时间</label></td>
+	<td><input id="leav_date" type="text" name="leav_date" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="leav_date_asm">预计离校时间</label></td>
+	<td><input id="leav_date_asm" type="text" name="leav_date_asm" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="hsk_score">HSK成绩</label></td>
+	<td><input id="hsk_score" type="text" name="hsk_score" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="college">所在院校</label></td>
+	<td><input id="college" type="text" name="college" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="latest_degree">最后学历</label></td>
+	<td><input id="latest_degree" type="text" name="latest_degree" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="occupation">职业</label></td>
+	<td><input id="occupation" type="text" name="occupation" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="work_place">工作或学习单位</label></td>
+	<td><input id="work_place" type="text" name="work_place" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="ch_school">汉语补习学校</label></td>
+	<td><input id="ch_school" type="text" name="ch_school" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="ch_en_school">英文汉语补习学校</label></td>
+	<td><input id="ch_en_school" type="text" name="ch_en_school" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="ch_start">补习汉语开始日期</label></td>
+	<td><input id="ch_start" type="text" name="ch_start" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="ch_finish">补习汉语结束日期</label></td>
+	<td><input id="ch_finish" type="text" name="ch_finish" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="recomm_from">推荐单位</label></td>
+	<td><input id="recomm_from" type="text" name="recomm_from" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="recomm_tel">推荐单位电话</label></td>
+	<td><input id="recomm_tel" type="text" name="recomm_tel" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="trustee">在华事务担保人</label></td>
+	<td><input id="trustee" type="text" name="trustee" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="tel_trustee">在华事务担保人电话</label></td>
+	<td><input id="tel_trustee" type="text" name="tel_trustee" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="econ_trustee">经济担保人或机构</label></td>
+	<td><input id="econ_trustee" type="text" name="econ_trustee" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="mother_lan">母语</label></td>
+	<td><input id="mother_lan" type="text" name="mother_lan" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="goodat">特长</label></td>
+	<td><input id="goodat" type="text" name="goodat" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="ch_lan">汉语能力</label></td>
+	<td><input id="ch_lan" type="text" name="ch_lan" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="en_lan">英语能力</label></td>
+	<td><input id="en_lan" type="text" name="en_lan" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="other_lan">其他语言</label></td>
+	<td><input id="other_lan" type="text" name="other_lan" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="guardian">监护人</label></td>
+	<td><input id="guardian" type="text" name="guardian" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="ch_family">在华亲属</label></td>
+	<td><input id="ch_family" type="text" name="ch_family" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="ch_tel">联系方式</label></td>
+	<td><input id="ch_tel" type="text" name="ch_tel" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="addr_now">现住址</label></td>
+	<td><input id="addr_now" type="text" name="addr_now" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="en_dlu">报道院校英文名</label></td>
+	<td><input id="en_dlu" type="text" name="en_dlu" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="ch_dlu">报道院校</label></td>
+	<td><input id="ch_dlu" type="text" name="ch_dlu" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="en_or">英文授课语言</label></td>
+	<td><input id="en_or" type="text" name="en_or" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="reg_from">报到开始日期</label></td>
+	<td><input id="reg_from" type="text" name="reg_from" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="reg_deadline">报到截止日期</label></td>
+	<td><input id="reg_deadline" type="text" name="reg_deadline" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="visa_type">签证类别</label></td>
+	<td><input id="visa_type" type="text" name="visa_type" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="visa_to">签证到期时间</label></td>
+	<td><input id="visa_to" type="text" name="visa_to" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="stay_no">居留许可号码</label></td>
+	<td><input id="stay_no" type="text" name="stay_no" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="stay_to">居留许可到期时间</label></td>
+	<td><input id="stay_to" type="text" name="stay_to" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="remarks">备注</label></td>
+	<td><input id="remarks" type="text" name="remarks" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="quane">经费办法_全额奖学金</label></td>
+	<td><input id="quane" type="text" name="quane" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="bufen_tuition">经费办法_部分奖学金_学费</label></td>
+	<td><input id="bufen_tuition" type="text" name="bufen_tuition" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="bufen_accom">经费办法_部分奖学金_住宿费</label></td>
+	<td><input id="bufen_accom" type="text" name="bufen_accom" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="bufen_med">经费办法_部分奖学金_医疗费</label></td>
+	<td><input id="bufen_med" type="text" name="bufen_med" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="bufen_book">经费办法_部分奖学金_教材费</label></td>
+	<td><input id="bufen_book" type="text" name="bufen_book" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="qita">经费办法_其他</label></td>
+	<td><input id="qita" type="text" name="qita" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="fee_type">交费类别</label></td>
+	<td><input id="fee_type" type="text" name="fee_type" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="fee_status">交费情况</label></td>
+	<td><input id="fee_status" type="text" name="fee_status" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="fee_total">总费用交完</label></td>
+	<td><input id="fee_total" type="text" name="fee_total" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="class_name">班级名称</label></td>
+	<td><input id="class_name" type="text" name="class_name" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="great_stu_type">重点学生类别</label></td>
+	<td><input id="great_stu_type" type="text" name="great_stu_type" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="family_info">家属信息</label></td>
+	<td><input id="family_info" type="text" name="family_info" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="history">履历</label></td>
+	<td><input id="history" type="text" name="history" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="table_no">201/202表编号</label></td>
+	<td><input id="table_no" type="text" name="table_no" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="country_send">派遣国家</label></td>
+	<td><input id="country_send" type="text" name="country_send" placeholder="" /></td>
+	</tr>
+	<tr>
+	<td><label for="send_via">派遣途径</label></td>
+	<td><input id="send_via" type="text" name="send_via" placeholder="" /></td>
+	</tr>
+
+</table>
+
+<br>
+<div align="center">
+	<button align="center" type="submit">提交</button>
+</div>
+<br>
+<br>
+
+	<div>
+		<p style="font-size:14px">--------<br>
+		* 蓝色字体为必填项<br>
+		* 如有任何问题请联系: imshishaohua@163.com&nbsp;&nbsp;</p>
+
+	<p align="center">Powered by@少华</p>
+	</div>
+</form>
+<!--
+<h4>List of data</h4>
+  {% for u in data %}
+    <p>{{ u.id }} | {{ u.name }} | {{ u.passport }} | {{ u.nationality }} | {{ u.grade }} | {{ u.major }} | {{ u.remarks }}</p>
+  {% else %}
+    <p>No users found in the db. You can make some above.</p>
+  {% endfor %}
+ -->
+<html>
+{% endblock %}
