@@ -13,7 +13,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = True
 db = SQLAlchemy(app)
 
 class User(db.Model):
-	__tablename__ = "stu_info"
+	#__tablename__ = "stu_info"
 	id = db.Column(db.Integer, primary_key=True)
 	idx = db.Column(db.String(100))
 	stu_id = db.Column(db.String(100))
